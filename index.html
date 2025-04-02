@@ -28,9 +28,24 @@
             <a href="#">Log in</a>
             <a href="#">Social Media</a>
             <input type="text" placeholder="Search...">
-            
+          </div>
+        
+          <!-- Hamburgermeny-knapp (visas bara i mobilen) -->
+          <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        
+          <!-- Mobilmeny (gömd som standard) -->
+          <div class="mobile-menu">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Artists</a>
+            <a href="#">Groups</a>
+            <a href="#">Categories</a>
+            <a href="#">Log in</a>
+            <a href="#">Social Media</a>
+            <input type="text" placeholder="Search...">
           </div>
         </nav>
+        
       
        
         <div class="hero-text">KpopMotion</div>
@@ -57,6 +72,12 @@
        
 
     
-    
+      <script>
+        function toggleMobileMenu() {
+          const menu = document.querySelector('.mobile-menu');
+          menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+      </script>
+      
 </body>
 </html>
