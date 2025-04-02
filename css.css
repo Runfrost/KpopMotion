@@ -31,8 +31,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 10rem;
-    font-weight: normal;
+    font-size: 11rem;
+    font-weight: lighter;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -52,18 +52,19 @@
   .navbar a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
+    margin: 0 26px;
     font-weight: bold;
     font-size: 1rem;
   }
   
   .navbar input[type="text"] {
-    padding: 4px 14px;
+    padding: 2px 1px;
     border: none;
     border-radius: 0px;
-    font-size: 1rem;
-    background-color: #6D7E82; 
-    color: white;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ccd5d7; 
+    color: rgb(61, 60, 60);
     transition: box-shadow 0.3s ease;
   }
   
@@ -137,7 +138,9 @@
     .hero-text {
       font-size: 2.5rem;
       padding: 0 20px;
+      top: 70%;
     }
+    
   
     .intro {
       padding: 40px 20px;
@@ -213,4 +216,102 @@
   .menu-toggle {
     display: block;
   }
+}
+
+.gif-section {
+  background-image: url("images/Jeon\ Jungkook\ GIF\ by\ BTS\ 방탄소년단.gif");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 380px; 
+  overflow: hidden;
+}
+
+.gif-overlay {
+  background-color: rgba(66, 79, 82, 0.7); /* #424F52 med transparens */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+
+.text-background {
+  background-color: rgba(42, 50, 54, 0.7); /* mörkare platta bakom texten */
+  padding: 30px;
+  border-radius: 0px;
+  max-width: 850px;
+}
+
+.intro-text {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.section-divider.top img {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Skugga nedåt */
+}
+
+.section-divider.bottom img {
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.4); /* Skugga uppåt */
+}
+
+
+@media screen and (max-width: 768px) {
+  .gif-section {
+    height: 400px; /* Gör den lite mindre på mobil */
+  }
+
+  .text-background {
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+
+  .intro-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* 🔍 Sökruta med ikon */
+.search-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-wrapper input {
+  padding: 6px 14px 6px 36px; /* plats för ikonen till vänster */
+  border: none;
+  border-radius: 0px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #6D7E82;
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-wrapper input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(151, 175, 179, 0.6);
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.search-wrapper input:focus + .search-icon {
+  opacity: 0;
 }
