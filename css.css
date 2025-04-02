@@ -113,4 +113,11 @@
     object-fit: cover;
     display: block;
   }
+
+  img {
+    -ms-high-contrast-adjust: none; /* För IE */
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+  
   
