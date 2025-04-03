@@ -57,7 +57,7 @@ html, body {
 .navbar input[type="text"] {
   padding: 2px 1px;
   border: none;
-  border-radius: 0px;
+  border-radius: 10px;
   font-size: 0.9rem;
   font-family: 'Poppins', sans-serif;
   background-color: #ccd5d7; 
