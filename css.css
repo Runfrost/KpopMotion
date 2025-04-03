@@ -1,170 +1,188 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; 
-    background-color: #27272a; 
-  }
-  
-  
-  .header-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-width: 100vw;
-  }
-  
-  .hero {
-    position: relative;
-    width: 100%;
-  }
-  
-  .hero-text {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 11rem;
-    font-weight: lighter;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; 
+  background-color: #344547; 
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100vw;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 11rem;
+  font-weight: lighter;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
 
 .navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    z-index: 2;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  z-index: 2;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 26px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navbar input[type="text"] {
+  padding: 2px 1px;
+  border: none;
+  border-radius: 0px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ccd5d7; 
+  color: rgb(61, 60, 60);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar input[type="text"]::placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
+.navbar input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(151, 175, 179, 0.6);
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  text-align: center;
+  padding: 60px 20px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.section-divider img {
+  width: 100%;
+  height: 40px;
+  object-fit: cover;
+  display: block;
+}
+
+img {
+  -ms-high-contrast-adjust: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
   }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 26px;
-    font-weight: bold;
+
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text {
+    font-size: 2.5rem;
+    padding: 0 20px;
+    top: 70%;
+  }
+
+  .intro {
+    padding: 40px 20px;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .intro p {
     font-size: 1rem;
   }
-  
-  .navbar input[type="text"] {
-    padding: 2px 1px;
-    border: none;
-    border-radius: 0px;
-    font-size: 0.9rem;
-    font-family: 'Poppins', sans-serif;
-    background-color: #ccd5d7; 
-    color: rgb(61, 60, 60);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .navbar input[type="text"]::placeholder {
-    color: white;
-    opacity: 0.3;
-  }
-  
-  .navbar input[type="text"]:focus {
-    outline: none;
-    box-shadow: 0 0 8px rgba(151, 175, 179, 0.6); /* 💫 Mjuk skugga */
-  }
-  
-  
-  
-  
-  
-  .navbar a:hover {
-    text-decoration: underline;
-  }
-  
-  
-  .intro {
-    text-align: center;
-    padding: 60px 20px 40px;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .intro h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .intro p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  /* Bilden som banner/separator */
-  .section-divider img {
+
+  .search-box input[type="text"] {
     width: 100%;
-    height: 40px; /* Ändra detta värde för att göra den smalare/högre */
-    object-fit: cover;
+    max-width: 250px;
+  }
+
+  .section-divider img {
+    height: 30px;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .menu-toggle {
     display: block;
   }
 
-  img {
-    -ms-high-contrast-adjust: none; /* För IE */
-    -webkit-user-drag: none;
-    user-select: none;
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  @media screen and (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-      gap: 10px;
-    }
-  
-    .nav-left,
-    .nav-right {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .hero-text {
-      font-size: 2.5rem;
-      padding: 0 20px;
-      top: 70%;
-    }
-    
-  
-    .intro {
-      padding: 40px 20px;
-    }
-  
-    .intro h2 {
-      font-size: 2rem;
-    }
-  
-    .intro p {
-      font-size: 1rem;
-    }
-  
-    .search-box input[type="text"] {
-      width: 100%;
-      max-width: 250px;
-    }
-  
-    .section-divider img {
-      height: 30px;
-    }
+
+  .footer-right {
+    width: 100%;
+    justify-content: flex-start;
   }
-  
-  /* Hamburgermenyn syns bara på mobil */
+
+  .footer-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer-form input[type="email"],
+  .footer-form button {
+    width: 100%;
+  }
+}
+
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -178,7 +196,6 @@
   z-index: 10;
 }
 
-/* Mobilmenyn – gömd från början */
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -207,28 +224,17 @@
   color: white;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-left,
-  .nav-right {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-
 .gif-section {
-  background-image: url("images/Jeon\ Jungkook\ GIF\ by\ BTS\ 방탄소년단.gif");
+  background-image: url("images/Jeon Jungkook GIF by BTS 방탄소년단.gif");
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 380px; 
+  height: 480px;
   overflow: hidden;
 }
 
 .gif-overlay {
-  background-color: rgba(66, 79, 82, 0.7); /* #424F52 med transparens */
+  background-color: rgba(66, 79, 82, 0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -240,9 +246,8 @@
   padding: 60px 20px;
 }
 
-
 .text-background {
-  background-color: rgba(42, 50, 54, 0.7); /* mörkare platta bakom texten */
+  background-color: rgba(42, 50, 54, 0.7);
   padding: 30px;
   border-radius: 0px;
   max-width: 850px;
@@ -257,30 +262,13 @@
 }
 
 .section-divider.top img {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Skugga nedåt */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .section-divider.bottom img {
-  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.4); /* Skugga uppåt */
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.4);
 }
 
-
-@media screen and (max-width: 768px) {
-  .gif-section {
-    height: 400px; /* Gör den lite mindre på mobil */
-  }
-
-  .text-background {
-    padding: 20px;
-    font-size: 0.95rem;
-  }
-
-  .intro-text {
-    font-size: 0.95rem;
-  }
-}
-
-/* 🔍 Sökruta med ikon */
 .search-wrapper {
   position: relative;
   display: inline-flex;
@@ -288,7 +276,7 @@
 }
 
 .search-wrapper input {
-  padding: 6px 14px 6px 36px; /* plats för ikonen till vänster */
+  padding: 6px 14px 6px 36px;
   border: none;
   border-radius: 0px;
   font-size: 0.9rem;
@@ -315,3 +303,237 @@
 .search-wrapper input:focus + .search-icon {
   opacity: 0;
 }
+
+/* --- Footer: Stay Connected + Form --- */
+.custom-footer {
+  background: linear-gradient(to right, #334445, #506063);
+  padding: 30px 60px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left {
+  flex: 1;
+  max-width: 650px;
+  text-align: left;
+  padding-left: 190px; 
+  font-family: 'serif', Georgia, 'Times New Roman', Times, serif;
+  font-weight: lighter;
+}
+
+.footer-left h3 {
+  margin-left: 170px;
+  font-size: 1.2rem;
+}
+
+.footer-left p {
+  margin-left: 60px;
+  font-size: 13px;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-form {
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  padding-right: 250px;
+  margin-left: 100px;
+}
+
+.footer-form input[type="email"] {
+  width: 100%;
+  padding: 6px 110px 6px 16px;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.9rem;
+  font-family: 'serif', Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-form button {
+  position: absolute;
+  top: 50%;
+  right: 250px;
+  transform: translateY(-50%);
+  padding: 6px 26px;
+  background-color: rgba(54, 84, 100, 0.7);
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-family: 'serif', Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-form button:hover {
+  background-color: #7f9ca0;
+}
+
+.footer-info {
+  position: relative;
+  background-image: url("images/15.webp");
+  background-size: cover;
+  background-position: center;
+  height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 60px;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-text {
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-text h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.footer-text p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.footer-darken {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(49, 66, 68, 0.9);
+  z-index: 1;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+  z-index: 3;
+  position: relative;
+}
+
+.footer-logo img {
+  height: 300px;
+  width: auto;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.3));
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: flex-start;
+  gap: 180px;
+  margin-left: 100px; 
+  font-family: 'serif', Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-column h4 {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 1px 0 6px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  font-family: 'serif', Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ✅ Mobilanpassning längst ner (tillagt) */
+@media screen and (max-width: 768px) {
+  .footer-info {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .footer-overlay {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footer-logo {
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo img {
+    height: 130px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-left: 0;
+  }
+
+  .footer-column h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .footer-column a {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+    padding-top: 10px;
+  }
+}
+
+
